@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hash form</title>
+</head>
+<body>
+    {% if hashed %}
+    <p>Your hashed string: {{hashed}}</p>
+    {% endif %}
+    {% if test %}
+    <p>You cracked the code for {{test}}</p>
+    {% endif %}
+    <form action="/hash-submit" method="post">
+        <label for="unhashed">Enter String to Hash</label>
+        <input type="text" name="unhashed" id="unhashed">
+        <button>Hash</button>
+    </form>
+</body>
+</html>

@@ -9,5 +9,11 @@
 <body>
     <h1>Yo!</h1>
     {{session["blah"]}}
+    {% if session["blah"] > 10 %}
+    <p>Greater than 10</p>
+    {%elif session["blah"] < 10 %}
+    <p>Less than 10</p>
+    {% endif %}
+    <a href="/hash-test">Hash a string</a>
 </body>
 </html>
